@@ -83,17 +83,21 @@ namespace PayCalculatorCPPGUI {
 			// label1
 			// 
 			this->label1->AutoSize = true;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->label1->Location = System::Drawing::Point(12, 21);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(54, 13);
+			this->label1->Size = System::Drawing::Size(78, 20);
 			this->label1->TabIndex = 2;
 			this->label1->Text = L"Pay Rate:";
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(163, 46);
+			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button1->Location = System::Drawing::Point(15, 142);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(75, 23);
+			this->button1->Size = System::Drawing::Size(101, 33);
 			this->button1->TabIndex = 3;
 			this->button1->Text = L"Calculate";
 			this->button1->UseVisualStyleBackColor = true;
@@ -102,11 +106,11 @@ namespace PayCalculatorCPPGUI {
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 24, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(270, 49);
+			this->label3->Location = System::Drawing::Point(161, 63);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(35, 20);
+			this->label3->Size = System::Drawing::Size(71, 37);
 			this->label3->TabIndex = 5;
 			this->label3->Text = L"Pay";
 			// 
@@ -122,9 +126,11 @@ namespace PayCalculatorCPPGUI {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(12, 83);
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label2->Location = System::Drawing::Point(12, 76);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(40, 13);
+			this->label2->Size = System::Drawing::Size(58, 20);
 			this->label2->TabIndex = 7;
 			this->label2->Text = L"Period:";
 			// 
@@ -161,13 +167,10 @@ namespace PayCalculatorCPPGUI {
 			basePay = payRate * 2080;
 		}
 		
-		
-		String^ str;//?
-
-		//payRate = System::Convert::ToSingle(textBoxPayRate->Text);
-		//basePay = payRate * 2080;
+		String^ str;//? 
 		str = System::String::Format("{0:c2}", basePay);
 		label3->Text = System::Convert::ToString(str);
+
 	}
 	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
 	}
